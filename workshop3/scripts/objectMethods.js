@@ -18,3 +18,45 @@ console.log(fruits);
 
 
 // object
+
+let person = {
+    fistName: "Nick",
+    lastName: "Jiqia",
+    children: ["Qeti", "Tako", "Demetre"]
+}
+
+let students = [
+    {
+        fistName: "Nick",
+        lastName: "Bla",
+        jobs: [
+            {
+                name: "productOwner",
+                company: "abc"
+            },
+            {
+                name: "productManager",
+                company: "asd"
+            }
+
+        ]
+    },
+    {
+        fistName: "Gio",
+        lastName: "Blu",
+        jobs: [
+            {
+                name: "product",
+                company: "yui"
+            },
+            {
+                name: "prod",
+                company: "jkl"
+            }
+
+        ]
+    }
+]
+
+let result = students[0].jobs[0].name;
+console.log(result);
