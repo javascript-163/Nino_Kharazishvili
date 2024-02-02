@@ -116,13 +116,13 @@ const quiz = () => {
                         correct++;
                         alert(`Wow ! Your answer is right! You have ${correct} correct answers.`)
                     } else {
-                        alert(`Your answer is wrong, the correct answer is '${answer5}'. You have ${correct} correct answer.`);
+                        alert(`Your answer is wrong, the correct answer is '${answer5}'. You have ${correct} correct answers.`);
                     }
                 } else {
-                    alert(`Your answer is wrong, the correct answer is '${answer4}'. You have ${correct} correct answer.`);
+                    alert(`Your answer is wrong, the correct answer is '${answer4}'. You have ${correct} correct answers.`);
                 }
             } else {
-                alert(`Your answer is wrong, the correct answer is '${answer3}'. You have ${correct} correct answer.`);
+                alert(`Your answer is wrong, the correct answer is '${answer3}'. You have ${correct} correct answers.`);
             }
         } else {
             alert(`Your answer is wrong, the correct answer is '${answer2}'. You have ${correct} correct answer.`);
