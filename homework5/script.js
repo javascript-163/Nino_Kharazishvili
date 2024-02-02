@@ -94,9 +94,9 @@ console.log(checkPassword(password));
 
 const quiz = () => {
     let correct = 0;
-    let question1 = prompt("What is the largest desert in the world?").toLowerCase();
+    let question1 = prompt("What is the largest desert in the world?");
     let answer1 = "antarctica";
-    if (question1 === answer1) {
+    if (question1 && question1.toLowerCase() === answer1) {
         correct++;
         let question2 = prompt("congrats your answer is right! next question: How many colors are there in a rainbow?");
         let answer2 = 7;
@@ -116,19 +116,19 @@ const quiz = () => {
                         correct++;
                         alert(`Wow ! Your answer is right! You have ${correct} correct answers.`)
                     } else {
-                        alert(`Your answer, '${question5}', is wrong, the correct answer is '${answer5}'. You have ${correct} correct answer.`);
+                        alert(`Your answer is wrong, the correct answer is '${answer5}'. You have ${correct} correct answer.`);
                     }
                 } else {
-                    alert(`Your answer, '${question4}', is wrong, the correct answer is '${answer4}'. You have ${correct} correct answer.`);
+                    alert(`Your answer is wrong, the correct answer is '${answer4}'. You have ${correct} correct answer.`);
                 }
             } else {
-                alert(`Your answer, '${question3}', is wrong, the correct answer is '${answer3}'. You have ${correct} correct answer.`);
+                alert(`Your answer is wrong, the correct answer is '${answer3}'. You have ${correct} correct answer.`);
             }
         } else {
-            alert(`Your answer, '${question2}', is wrong, the correct answer is '${answer2}'. You have ${correct} correct answer.`);
+            alert(`Your answer is wrong, the correct answer is '${answer2}'. You have ${correct} correct answer.`);
         }
     } else {
-        alert(`Your answer, '${question1}', is wrong, the correct answer is '${answer1}'. You have ${correct} correct answer.`);
+        alert(`Your answer is wrong, the correct answer is '${answer1}'. You have ${correct} correct answer.`);
     }
 
 }
