@@ -59,42 +59,42 @@ function sum(num1, num2) {
 
 // იგივეს ვერ ვიტყვით ფუნცქიის ექსფრეშენებზე (მაგ: arrow function), იმ შემთხვევაში თუ ფუნქციის ექსფრეშენის გამოძახებას ვეცდებით მის ინიციალიზაციამდე მივიღებთ ერორს: "Cannot access 'sum' before initialization".
 
-sumNumbers(5, 15);
+// sumNumbers(5, 15);
 
-const sumNumbers = (num1, num2) => {
-    let sum = num1 + num2;
-    console.log(sum);
-}
+// const sumNumbers = (num1, num2) => {
+//     let sum = num1 + num2;
+//     console.log(sum);
+// }
 
 // მიმდინარე სქოუფის ასახსნელად მეორე მაგალითსაც განვიხილავ:
 // ამ შემთხვევაში დეკლარირებული ფუნქცია substract-ის "აწევა", ჰოისთინგი ხდება მისი მიმდინარე 
 // სქოუფის ანუ ფუნქცია sum-ის ფარგლებში და არა მის გარეთ,
 // შესაბამისად sum-ის გარეთ მისი გამოძახება დაგვიბრუნებს ერორს, რომ substract განსაზღვრული არ არის.
 
-sum(12, 10);
-substract(25, 14);
+// getSum(12, 10);
+// getSubstract(25, 14);
 
-function sum(num1, num2) {
-    let sum = num1 + num2;
-    console.log(sum);
+// function getSum(num1, num2) {
+//     let sum = num1 + num2;
+//     console.log(sum);
 
-    function substract(num1, num2) {
-        let substraction = num1 - num2;
-        console.log(substraction);
-    }
-}
+//     function getSubstract(num1, num2) {
+//         let substraction = num1 - num2;
+//         console.log(substraction);
+//     }
+// }
 
 // ზემოთ განხილული კოდის სწორი ვერსია:
 
-sum(12, 10);
+getSum(12, 10);
 
-function sum(num1, num2) {
+function getSum(num1, num2) {
     let sum = num1 + num2;
     console.log(sum);
 
-    substract(25, 14);
+    getSubstract(25, 14);
 
-    function substract(num1, num2) {
+    function getSubstract(num1, num2) {
         let substraction = num1 - num2;
         console.log(substraction);
     }
