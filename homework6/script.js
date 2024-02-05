@@ -9,7 +9,7 @@ const longestWord = array.reduce((accumulator, current) => {
     return current.length > accumulator.length ? current : accumulator;
 }, "")
 
-console.log(`longest word is: ${longestWord}`);
+console.log(`the longest word is: ${longestWord}`);
 
 
 // 2. შექმენით ობიექტი სახელით "calculator" შესაბამისი ატრიბუტებით სახელად. num1, num2,
@@ -18,8 +18,8 @@ console.log(`longest word is: ${longestWord}`);
 // სხვაობა, ნამრავლი, განაყოფი. ეს ყველაფერი მოახდინეთ this საკვანძო სიტყვის მეშვეობით.
 
 let calculator = {
-    num1: 5,
-    num2: 7,
+    num1: 10,
+    num2: 5,
     add: function () {
         return this.num1 + this.num2;
     },
