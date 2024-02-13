@@ -35,15 +35,18 @@ btnChangeColor.addEventListener("click", () => {
 // 3
 
 let content = document.querySelector(".content");
-let btnShow = document.getElementById("btn_show");
-let btnHide = document.getElementById("btn_hide");
+let btnToggle = document.getElementById("btn_toggle");
 
+btnToggle.addEventListener("click", () => {
+    if (content.style.display === "none") {
+        content.style.display = "block";
+        btnToggle.innerText = "Hide";
+    } else {
+        content.style.display = "none";
+        btnToggle.innerText = "Show";
+    }
 
-btnShow.addEventListener("click", () => {
-    content.style.display = "block";
 })
 
-btnHide.addEventListener("click", () => {
-    content.style.display = "none";
-})
+
 
