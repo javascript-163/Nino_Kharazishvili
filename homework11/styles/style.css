@@ -2,7 +2,17 @@
     width: min(100%, 1440px);
     margin: auto;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
 }
+
+#searchInput {
+    width: 250px;
+    height: 30px;
+}
+
 
 .cards_wrapper {
     display: flex;
