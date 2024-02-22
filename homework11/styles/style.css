@@ -1,0 +1,36 @@
+.container {
+    width: min(100%, 1440px);
+    margin: auto;
+    padding: 50px;
+}
+
+.cards_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 5px;
+}
+
+.product_img {
+    width: 100%;
+}
+
+.add_btn {
+    border: none;
+}
+
+.add_btn:hover {
+    cursor: pointer;
+}
