@@ -15,37 +15,70 @@ function searchProduct() {
 
 //Auto
 
-let slideIndex = 0;
-showSlides();
+let slidesContainer = document.querySelectorAll(".img_wrapper.auto");
 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("auto");
-    let slidesTwo = document.getElementsByClassName("auto2");
-    let slidesThree = document.getElementsByClassName("auto3");
-    let slidesFour = document.getElementsByClassName("auto4");
-
-    slideIndex++;
-
-    autoChage(slides, i, slideIndex);
-    autoChage(slidesTwo, i, slideIndex);
-    autoChage(slidesThree, i, slideIndex);
-    autoChage(slidesFour, i, slideIndex);
-
-    setTimeout(showSlides, 2000);
+for (let container of slidesContainer) {
+    let slideIndex = 0;
+    showSlides(container.children, slideIndex);
 }
 
-function autoChage(slides, i) {
-    for (i = 0; i < slides.length; i++) {
+function showSlides(slides, index) {
+
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
+    index = index + 1;
+
+    if (index > slides.length) {
+        index = 1;
     }
-    slides[slideIndex - 1].style.display = "block";
+
+    slides[index - 1].style.display = "block";
+
+    setTimeout(() => {
+        showSlides(slides, index)
+    }, 2000)
 
 
 }
 
+
+
 //Manual
+let slidesManualContainer = document.querySelectorAll(".img_wrapper.manual");
+
+for (let container of slidesManualContainer) {
+    let indexManual = -1;
+
+    container.querySelector(".fa-arrow-left").addEventListener("click", () => {
+        showSlidesManual(-1)
+    })
+    container.querySelector(".fa-arrow-right").addEventListener("click", () => {
+        showSlidesManual(1)
+    })
+
+    function showSlidesManual(n) {
+        let slides = container.querySelectorAll(".product_img.manual");
+        
+        indexManual += n;
+        if (indexManual > slides.length) {
+            indexManual = 1;
+        }
+
+        if (indexManual < 1) {
+            indexManual = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[indexManual - 1].style.display = "block";
+
+    }
+
+    showSlidesManual(2)
+
+}
+
