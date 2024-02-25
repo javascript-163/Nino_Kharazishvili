@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Create Your Account</h1>
+        <form name="form" id="registration_form">
+            <div class="name input_wrapper">
+                <input type="text" class="form_input" name="NAME" placeholder="Name" id="name">
+                <input type="text" class="form_input" name="SURENAME" placeholder="Surename" id="lastName">
+            </div>
+            <div class="username input_wrapper">
+                <input type="text" class="form_input" name="USERNAME" placeholder="Username" id="username" required>
+                <input type="password" class="form_input" name="PASSWORD" placeholder="Password" id="password" required>
+            </div>
+            <div class="additional input_wrapper">
+                <input type="text" class="form_input" name="LOCATION" placeholder="Location" id="location">
+                <input type="number" class="form_input" name="AGE" placeholder="Age" id="age">
+            </div>
+
+            <button type="submit" class="btn">SUBMIT</button>
+            <div class="login_link">
+                <h3>Already have an account?</h3>
+                <a href="login.html">
+                    Log In Here
+                </a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
