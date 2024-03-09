@@ -296,7 +296,7 @@ header {
     color: white;
 }
 
-/* events section */
+/* news and events section */
 
 .events_section {
     padding: 30px;
@@ -314,11 +314,13 @@ header {
 
 .event_cards_wrapper {
     display: flex;
+    overflow: auto;
     column-gap: 30px;
 }
 
 .event_card {
-    max-width: 200px;
+    flex: 1 0 250px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -326,12 +328,9 @@ header {
     padding: 10px;
 }
 
-.event_img_wrapper {
-    width: 200px;
-}
-
 .event_img {
     width: 100%;
+    object-fit: cover;
 }
 
 .event_description {
@@ -493,4 +492,94 @@ footer p {
 .fa-chevron-right:hover {
     cursor: pointer;
     color: var(--font-color);
+}
+
+/* events and news pages */
+
+.event_cover_container {
+    padding: 120px 50px 50px;
+    background: var(--background-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    border-bottom: 1px solid var(--color-bright);
+}
+
+.event_cover_container h2 {
+    color: var(--color-bright);
+    font-family: var(--sec-font);
+    font-size: 18px;
+}
+
+.event_cover_container h3 {
+    color: var(--font-color);
+    font-family: var(--sec-font);
+    font-size: 35px;
+    font-weight: 350;
+    letter-spacing: 5px;
+}
+
+.event_cover_container p {
+    line-height: 1.8em;
+    width: 60%;
+    color: var(--font-color);
+    font-family: var(--font);
+    font-weight: 350;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.event_cover_container .wider {
+    width: 80%;
+}
+
+.event_cover_container p>span {
+    font-weight: 600;
+
+}
+
+.event_cover_img_wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.event_cover_img_wrapper.gap {
+    column-gap: 30px;
+}
+
+
+.event_cover_img {
+    width: 30%;
+}
+
+.event_navigation_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event_navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.event_navigation span {
+    color: var(--font-color);
+    font-family: var(--font);
+    font-weight: 350;
+    font-size: 12px;
+    transition: all .5s ease-in;
+}
+
+.event_navigation:hover span {
+    font-weight: 500;
+}
+
+.event_cover_img.bigger {
+    width: 80%;
 }
