@@ -1,6 +1,6 @@
 //Manual slide
-
-let indexManual = -1;
+let slides = document.querySelectorAll(".special_events_slider_img");
+let index = 0;
 
 document.querySelector(".fa-chevron-left").addEventListener("click", () => {
     showSlidesManual(-1)
@@ -10,23 +10,30 @@ document.querySelector(".fa-chevron-right").addEventListener("click", () => {
 })
 
 function showSlidesManual(n) {
-    let slides = document.querySelectorAll(".special_events_slider_img");
+    index = index + n;
 
-    indexManual += n;
-    if (indexManual > slides.length) {
-        indexManual = 1;
-    }
+    if (index >= slides.length) {
+        index = 0;
 
-    if (indexManual < 1) {
-        indexManual = slides.length;
+    } else if (index < 0) {
+        index = slides.length - 1;
     }
 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    slides[indexManual - 1].style.display = "block";
+    slides[index].style.display = "block";
 
 }
 
-showSlidesManual(2)
+setInterval(() => {
+    showSlidesManual(1);
+}, 5000);
+
+showSlidesManual(0)
+
+
+
+//Auto slide
+
