@@ -205,7 +205,9 @@ header {
 
 .home_info_section h1,
 .story_section h1,
-.special_events_txt h1 {
+.special_events_txt h1,
+.login_wrapper h1,
+.register_wrapper h1 {
     font-size: 28px;
     font-family: var(--font);
     color: var(--font-color);
@@ -582,4 +584,119 @@ footer p {
 
 .event_cover_img.bigger {
     width: 80%;
+}
+
+
+/* log_in page */
+.login_container,
+.register_container {
+    height: 650px;
+    padding-block: 160px 80px;
+    background: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_wrapper,
+.register_wrapper {
+    border-radius: 2px;
+    width: 350px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+.login_form_user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_input {
+    width: 250px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 5px 2px;
+}
+
+.form_input::placeholder {
+    font-family: var(--sec-font);
+    color: var(--color-bright);
+    opacity: .5;
+}
+
+.form_input_label {
+    font-family: var(--font);
+    color: var(--font-color);
+    font-size: 14px;
+}
+
+.login.btn,
+.register.btn {
+    opacity: .5;
+}
+
+.login_link {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font);
+    font-size: 12px;
+    color: var(--font-color);
+}
+
+.login_link a {
+    color: var(--color-bright);
+    opacity: .5;
+    transition: all 1s ease-in-out;
+}
+
+.login_link a:hover {
+    opacity: 1;
+}
+
+/* registration */
+#registration_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.register_container {
+    height: 900px;
+}
+
+.register_wrapper {
+    width: 400px;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.register_msg,
+.login_msg {
+    width: 250px;
+    font-size: 13px;
+    font-family: var(--font);
+    text-align: center;
+}
+
+
+.hidden {
+    display: none;
 }
