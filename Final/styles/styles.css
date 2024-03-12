@@ -207,7 +207,8 @@ header {
 .story_section h1,
 .special_events_txt h1,
 .login_wrapper h1,
-.register_wrapper h1 {
+.register_wrapper h1,
+.reservation_wrapper h1 {
     font-size: 28px;
     font-family: var(--font);
     color: var(--font-color);
@@ -589,7 +590,8 @@ footer p {
 
 /* log_in page */
 .login_container,
-.register_container {
+.register_container,
+.reservation_container {
     height: 650px;
     padding-block: 160px 80px;
     background: var(--background-light);
@@ -599,7 +601,8 @@ footer p {
 }
 
 .login_wrapper,
-.register_wrapper {
+.register_wrapper,
+.reservation_wrapper {
     border-radius: 2px;
     width: 350px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -611,7 +614,8 @@ footer p {
     row-gap: 30px;
 }
 
-#login_form {
+#login_form,
+#reservation_form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -645,7 +649,8 @@ footer p {
 }
 
 .login.btn,
-.register.btn {
+.register.btn,
+.reserve.btn {
     opacity: .5;
 }
 
@@ -689,7 +694,8 @@ footer p {
 }
 
 .register_msg,
-.login_msg {
+.login_msg,
+.reserve_msg {
     width: 250px;
     font-size: 13px;
     font-family: var(--font);
@@ -699,4 +705,27 @@ footer p {
 
 .hidden {
     display: none;
+}
+
+
+/*reservation container */
+
+
+.reserve_input_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reserve_quantity {
+    width: 20%;
+}
+
+.reserve_msg {
+    margin: auto;
+}
+
+.reserve_time,
+.reserve_date {
+    cursor: pointer;
 }

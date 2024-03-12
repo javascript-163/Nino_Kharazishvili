@@ -42,8 +42,33 @@
                 </a>
             </div>
         </header>
-
-
+        <section class="reservation_container">
+            <div class="reservation_wrapper">
+                <h1>Reserve</h1>
+                <form name="form" id="reservation_form">
+                    <div class="reserve_input_wrapper">
+                        <label for="date" class="form_input_label">Date:</label>
+                        <input type="date" id="date" name="date" class="reserve_date" required>
+                    </div>
+                    <div class="reserve_input_wrapper">
+                        <label class="form_input_label" for="time">Choose time:</label>
+                        <select name="time" class="reserve_time">
+                            <option value="three">15:00</option>
+                            <option value="three-thirty">15:30</option>
+                            <option value="four">16:00</option>
+                            <option value="four-thirty">16:30</option>
+                            <option value="five">17:00</option>
+                        </select>
+                    </div>
+                    <div class="reserve_input_wrapper">
+                        <label class="form_input_label" for="quantity">How many people</label>
+                        <input type="number" name="quantity" class="reserve_quantity" id="quantity" min="0" required />
+                    </div>
+                    <button type="submit" class="reserve btn">Reserve</button>
+                    <p class="reserve_msg hidden">Reservation confirmation sent to your email.</p>
+                </form>
+            </div>
+        </section>
         <footer id="find_us">
             <a href="index.html" class="logo_link">
                 <img src="assets/logo.jpg" alt="page icon" class="logo_link_img footer">
@@ -70,6 +95,7 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="reservation.js"></script>
 </body>
 
 </html>
