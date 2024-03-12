@@ -1,4 +1,4 @@
-//Manual slide
+
 let slides = document.querySelectorAll(".special_events_slider_img");
 let index = 0;
 
@@ -33,7 +33,4 @@ setInterval(() => {
 
 showSlidesManual(0)
 
-
-
-//Auto slide
 
