@@ -57,7 +57,7 @@ header {
     width: 100%;
 }
 
-.reserve_btn_container {
+.login_btn_container {
     width: 33%;
     display: flex;
     justify-content: flex-end;
@@ -230,16 +230,24 @@ header {
     font-family: var(--font);
 }
 
-.home_info_section_menu_link {
+.home_info_section_links_wrapper {
     width: 60%;
-    text-align: center;
-    font-size: 20px;
-    color: var(--color-bright);
-    font-family: var(--font);
     padding-block: 20px;
     border-top: 1px solid var(--color-bright);
     border-bottom: 1px solid var(--color-bright);
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
+
+.home_info_section_link,
+.home_info_section_links_wrapper>span {
+    font-size: 20px;
+    color: var(--color-bright);
+    font-family: var(--font);
+}
+
 
 .home_info_section_list {
     display: flex;

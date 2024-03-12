@@ -36,9 +36,9 @@
             <a href="index.html" class="logo_link">
                 <img src="assets/logo.jpg" alt="page icon" class="logo_link_img">
             </a>
-            <div class="reserve_btn_container">
-                <a href="login.html">
-                    <button class="reserve btn">Reserve a Table</button>
+            <div class="login_btn_container">
+                <a href="login.html" id="login_btn_link">
+                    <button class="login btn" id="login_btn"></button>
                 </a>
             </div>
         </header>
@@ -62,7 +62,11 @@
             <a href="https://www.google.com/maps/place/The+Trailhead+Compound/@35.6750323,-105.9643036,17z/data=!3m1!4b1!4m6!3m5!1s0x8718507a660cd60d:0x7bdd3dc87330d635!8m2!3d35.675028!4d-105.9617287!16s%2Fg%2F11fx912gwc?entry=ttu"
                 target="_blank" class="home_info_section_address">Trailhead Compound | 922 Shoofly St. Santa Fe, NM
                 87505</a>
-            <a href="menu.html" class="home_info_section_menu_link"> Our Menus </a>
+            <div class="home_info_section_links_wrapper">
+                <a href="menu.html" class="home_info_section_link menu"> Our Menus </a>
+                <span>|</span>
+                <a href="" class="home_info_section_link reserve" id="reserve_btn"> Reserve a table </a>
+            </div>
             <ul class="home_info_section_list">
                 <li>
                     Monday to Friday 8am - 5pm
@@ -74,6 +78,7 @@
                     Sunday 9am - 3pm
                 </li>
             </ul>
+
         </section>
         <section class="story_section">
             <div class="story_section_img_wrapper">
@@ -145,6 +150,7 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="loginSession.js"></script>
 </body>
 
 </html>

@@ -36,9 +36,9 @@
             <a href="index.html" class="logo_link">
                 <img src="assets/logo.jpg" alt="page icon" class="logo_link_img">
             </a>
-            <div class="reserve_btn_container">
-                <a href="login.html">
-                    <button class="reserve btn">Reserve a Table</button>
+            <div class="login_btn_container">
+                <a href="login.html" id="login_btn_link">
+                    <button class="login btn" id="login_btn">Log out</button>
                 </a>
             </div>
         </header>
@@ -47,12 +47,12 @@
                 <h1>Reserve</h1>
                 <form name="form" id="reservation_form">
                     <div class="reserve_input_wrapper">
-                        <label for="date" class="form_input_label">Date:</label>
+                        <label for="date" class="form_input_label">Choose date:</label>
                         <input type="date" id="date" name="date" class="reserve_date" required>
                     </div>
                     <div class="reserve_input_wrapper">
                         <label class="form_input_label" for="time">Choose time:</label>
-                        <select name="time" class="reserve_time">
+                        <select name="time" class="reserve_time" id="time">
                             <option value="three">15:00</option>
                             <option value="three-thirty">15:30</option>
                             <option value="four">16:00</option>
@@ -61,11 +61,11 @@
                         </select>
                     </div>
                     <div class="reserve_input_wrapper">
-                        <label class="form_input_label" for="quantity">How many people</label>
+                        <label class="form_input_label" for="quantity">How many people:</label>
                         <input type="number" name="quantity" class="reserve_quantity" id="quantity" min="0" required />
                     </div>
                     <button type="submit" class="reserve btn">Reserve</button>
-                    <p class="reserve_msg hidden">Reservation confirmation sent to your email.</p>
+                    <p class="reserve_msg hidden"></p>
                 </form>
             </div>
         </section>

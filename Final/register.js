@@ -46,7 +46,8 @@ function saveFormData(formData) {
         msg.innerHTML = "Sign up successful";
         msg.classList.remove("hidden");
         msg.style.color = "green";
+        localStorage.setItem('formData', JSON.stringify(storedFormData));
         window.location.href = "login.html";
     }
-    localStorage.setItem('formData', JSON.stringify(storedFormData));
+
 }
