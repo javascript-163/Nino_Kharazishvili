@@ -217,7 +217,8 @@ header {
 }
 
 .home_info_section h2,
-.story_section h2 {
+.story_section h2,
+#menu_item_type {
     font-size: 23px;
     color: var(--sec-font-color);
     font-family: var(--sec-font);
@@ -736,4 +737,49 @@ footer p {
 .reserve_time,
 .reserve_date {
     cursor: pointer;
+}
+
+/* menu */
+.menu_container {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--color-bright);
+}
+
+.menu_selection_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.menu_selection_btn {
+    border: none;
+}
+
+.menu_items_container {
+    padding-block: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+#menu_item_type {
+    text-decoration: underline;
+}
+
+.menu_list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.menu_list li {
+    font-family: var(--font);
+    font-size: 15px;
 }
