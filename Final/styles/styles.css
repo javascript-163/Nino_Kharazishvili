@@ -783,3 +783,12 @@ footer p {
     font-family: var(--font);
     font-size: 15px;
 }
+
+#searchInput {
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--color-bright);
+    border-radius: .5rem;
+    font-family: var(--font);
+    outline: none;
+}

@@ -1,4 +1,4 @@
-const apiKey = 'e487bf99cab14278be1a86a25d85d3e4';
+const apiKey = '61c21a80d2d744cab0b64bff7bb77263';
 const baseUrl = 'https://api.spoonacular.com/';
 const endpoint = 'food/menuItems/search';
 
@@ -19,7 +19,7 @@ async function fetchMenuItems(query) {
         const data = await response.json();
         data.menuItems.forEach((item, index) => {
             let menuItem = document.getElementById(`menu_item${index}`);
-            menuItem.innerHTML = `${item.title}`;
+            menuItem.innerText = `${item.title}`;
         });
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -28,7 +28,7 @@ async function fetchMenuItems(query) {
 
 
 function loadMenuItems(query) {
-    menuTypeTitle.innerHTML = `${query.toUpperCase()}`;
+    menuTypeTitle.innerText = `${query.toUpperCase()}`;
     fetchMenuItems(query);
 }
 
@@ -51,3 +51,18 @@ empanadaBtn.addEventListener("click", () => {
 dessertBtn.addEventListener("click", () => {
     loadMenuItems("dessert");
 });
+
+
+//filter
+
+function searchProduct() {
+    let searchPhrase = document.getElementById("searchInput").value.toUpperCase();
+    let menuItems = document.querySelectorAll(".menu_item")
+    menuItems.forEach((item) => {
+        if (item.innerText.toUpperCase().indexOf(searchPhrase) > -1) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    })
+}
