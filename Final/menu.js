@@ -1,4 +1,4 @@
-const apiKey = '61c21a80d2d744cab0b64bff7bb77263';
+const apiKey = 'c4d37e31e0704fe68acbeda0d076c5fe';
 const baseUrl = 'https://api.spoonacular.com/';
 const endpoint = 'food/menuItems/search';
 
