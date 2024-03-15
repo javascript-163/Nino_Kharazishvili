@@ -32,6 +32,11 @@ if (form) {
                 msg.style.color = "red";
                 form.reset();
             }
+        } else {
+            msg.innerHTML = "You are not registered, please sign up";
+            msg.classList.remove("hidden");
+            msg.style.color = "red";
+            form.reset();
         }
 
     })
