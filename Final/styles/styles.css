@@ -496,8 +496,14 @@ footer p {
     width: 50%;
 }
 
+.special_events_slider_img_wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
 .special_events_slider_img {
-    width: 100%;
+    width: 80%;
 }
 
 .special_events_txt {
